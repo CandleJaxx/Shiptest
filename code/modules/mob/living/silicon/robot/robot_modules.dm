@@ -15,6 +15,10 @@
 	var/list/storages = list()
 
 	var/cyborg_base_icon = "robot" //produces the icon for the borg and, if no special_light_key is set, the lights
+	///The icon file for our borg icon
+	var/cyborg_icon_file = 'icons/mob/robots.dmi'
+	///If we want specific sprites for being stunned/dead
+	var/cyborg_stat_icons = FALSE
 	var/special_light_key //if we want specific lights, use this instead of copying lights in the dmi
 
 	var/moduleselect_icon = "nomod"
@@ -179,6 +183,8 @@
 	if(!RM.be_transformed_to(src))
 		qdel(RM)
 		return
+	cyborg.base_pixel_x = 0
+	cyborg.base_pixel_y = 0
 	R.module = RM
 	R.update_module_innate()
 	RM.rebuild_modules()
@@ -369,6 +375,7 @@
 		"Noble" = image(icon = 'icons/mob/robots.dmi', icon_state = "Noble-MED"),
 		"R34 - MED6a 'Gibbs'" = image(icon = 'icons/mob/robots.dmi', icon_state = "gibbs"),
 		"Qualified Doctor" = image(icon = 'icons/mob/robots.dmi', icon_state = "qualified_doctor")
+		"Avarice" = image(icon = 'icons/mob/tallrobot_med.dmi', icon_state = "mekamed")
 		)
 		med_icons = sortList(med_icons)
 	var/med_borg_icon = show_radial_menu(R, R , med_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
