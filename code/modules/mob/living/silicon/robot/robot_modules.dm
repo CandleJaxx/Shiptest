@@ -374,7 +374,7 @@
 		"Kodiak - 'Arachne'" = image(icon = 'icons/mob/robots.dmi', icon_state = "arachne"),
 		"Noble" = image(icon = 'icons/mob/robots.dmi', icon_state = "Noble-MED"),
 		"R34 - MED6a 'Gibbs'" = image(icon = 'icons/mob/robots.dmi', icon_state = "gibbs"),
-		"Qualified Doctor" = image(icon = 'icons/mob/robots.dmi', icon_state = "qualified_doctor")
+		"Qualified Doctor" = image(icon = 'icons/mob/robots.dmi', icon_state = "qualified_doctor"),
 		"Avarice" = image(icon = 'icons/mob/tallrobot_med.dmi', icon_state = "mekamed")
 		)
 		med_icons = sortList(med_icons)
