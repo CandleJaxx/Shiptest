@@ -369,7 +369,7 @@
 		"Noble" = image(icon = 'icons/mob/robots.dmi', icon_state = "Noble-MED"),
 		"R34 - MED6a 'Gibbs'" = image(icon = 'icons/mob/robots.dmi', icon_state = "gibbs"),
 		"Qualified Doctor" = image(icon = 'icons/mob/robots.dmi', icon_state = "qualified_doctor"),
-		"Avarice" = image(icon = 'icons/mob/tallrobot_med.dmi', icon_state = "mekamed")
+		"MEKA" = image(icon = 'icons/mob/tallrobot_med.dmi', icon_state = "mekamed")
 		)
 		med_icons = sortList(med_icons)
 	var/med_borg_icon = show_radial_menu(R, R , med_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
@@ -420,6 +420,10 @@
 			cyborg_base_icon = "qualified-doctor"
 			cyborg_icon_override = 'icons/mob/robots.dmi'
 			special_light_key = "qualified-doctor"
+		if("MEKA")
+			cyborg_base_icon = "mekamed"
+			cyborg_icon_override = 'icons/mob/tallrobot_med.dmi'
+			special_light_key = "mekamed"
 		else
 			return FALSE
 	return ..()
@@ -474,6 +478,7 @@
 		"Kodiak" = image(icon = 'icons/mob/robots.dmi', icon_state = "kodiak-eng"),
 		"Noble" = image(icon = 'icons/mob/robots.dmi', icon_state = "Noble-ENG"),
 		"R34 - ENG7a 'Conagher'" = image(icon = 'icons/mob/robots.dmi', icon_state = "conagher"),
+		"MEKA" = image(icon = 'icons/mob/tallrobot_eng.dmi', icon_state = "mekaengi")
 		)
 		engi_icons = sortList(engi_icons)
 	var/engi_borg_icon = show_radial_menu(R, R , engi_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
@@ -520,6 +525,10 @@
 			cyborg_base_icon = "conagher"
 			cyborg_icon_override = 'icons/mob/robots.dmi'
 			special_light_key = "conagher"
+		if("MEKA")
+			cyborg_base_icon = "mekaengi"
+			cyborg_icon_override = 'icons/mob/tallrobot_eng.dmi'
+			special_light_key = "mekaengi"
 		else
 			return FALSE
 	return ..()
@@ -916,7 +925,8 @@
 		"#31" = image(icon = 'icons/mob/robots.dmi', icon_state = "servbot-miner"),
 		"Kodiak" = image(icon = 'icons/mob/robots.dmi', icon_state = "kodiak-miner"),
 		"Noble" = image(icon = 'icons/mob/robots.dmi', icon_state = "Noble-SUP"),
-		"R34 - MIN2a 'Ishimura'" = image(icon = 'icons/mob/robots.dmi', icon_state = "ishimura")
+		"R34 - MIN2a 'Ishimura'" = image(icon = 'icons/mob/robots.dmi', icon_state = "ishimura"),
+		"MEKA" = image(icon = 'icons/mob/tallrobot_mine.dmi', icon_state = "mekamine")
 		)
 		mining_icons = sortList(mining_icons)
 	var/mining_borg_icon = show_radial_menu(R, R , mining_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
@@ -959,6 +969,10 @@
 			cyborg_base_icon = "ishimura"
 			cyborg_icon_override = 'icons/mob/robots.dmi'
 			special_light_key = "ishimura"
+		if("MEKA")
+			cyborg_base_icon = "mekamine"
+			cyborg_icon_override = 'icons/mob/tallrobot_mine.dmi'
+			special_light_key = "mekamine"
 		else
 			return FALSE
 	return ..()
